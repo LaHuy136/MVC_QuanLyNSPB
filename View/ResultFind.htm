@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết quả tìm kiếm</title>
+</head>
+<body>
+    
+</body>
+<?php
+echo '<h2 style="text-align: center">Dữ liệu tìm thấy:</h2>';
+if (!empty($staffList)) {
+    echo '<table border = "1" width ="100%" align="center">';
+    echo '<tr><th>STT</th><th>Tên sinh viên</th><th>Tuổi</th><th>Trường</th></tr>';
+    foreach ($staffList as $i => $staff) {
+        echo "<tr>";
+        echo "<td> $staff->IDNV </td>";
+        echo "<td> $staff->Hoten </td>";
+        echo "<td> $staff->IDPB </td>";
+        echo "<td> $staff->Diachi </td>";
+        echo "</tr>";
+    }
+    echo '</table>';
+}
+?>
+</br>
+<p style="text-align: center"><a href="javascript:history.back()">Quay lại</a></p>
+</html>

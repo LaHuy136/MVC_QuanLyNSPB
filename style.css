@@ -1,0 +1,34 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#centerFrame {
+    display: flex;
+}
+
+.frame-center.left {
+    height: 80vh;
+    width: 200px;
+    margin-right: 5px;
+}
+
+.frame-center.main {
+    width: 78%;
+}
+
+.frame-center.right {
+    width: 200px;
+}
+
+
+ 

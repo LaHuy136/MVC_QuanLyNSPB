@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên</title>
+</head>
+<body>
+    <?php
+        echo "<h2 style='text-align: center'>Danh sách nhân viên:</h2>";
+        echo "<form method='post' action='C_Staff.php?delAll'>";
+            echo "<table border = '1' width ='100%'>";
+            echo "<tr> <th>ID nhân viên</th> <th>Họ tên</th> <th>ID phòng ban</th> <th>Địa chỉ</th> <th></th>" ;
+            if (!empty($staffList)) {
+                foreach ($staffList as $i => $staff) {
+                    echo "<tr>";
+                    echo "<td> $staff->IDNV </td>";
+                    echo "<td> $staff->Hoten </td>";
+                    echo "<td> $staff->IDPB </td>";
+                    echo "<td> $staff->Diachi </td>";
+                    echo '<td><input type="checkbox" name="'.$staff->IDNV.'" value="'.$staff->IDNV.'"></td>';
+                    echo "</tr>";
+                }
+            }
+            echo "<tr> <td align='right' colspan='5'><input type='submit' value='Xóa nhân viên'></td> </tr>";
+            echo "</table>";
+        echo "</form>";
+    ?>
+</body>
+</html>

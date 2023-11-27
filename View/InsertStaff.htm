@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form chèn nhân viên</title>
+</head>
+<style>
+    .form-container {
+        max-width: 660px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 30px auto 0 auto;
+    }
+
+    .form__row {
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form__label {
+        min-width: 130px;
+        margin-top: 7px;
+    }
+
+    .form__input {
+        flex: 1;
+        padding: 5px;
+    }
+
+    .form__button {
+        display: flex;
+        padding: 12px;
+        margin-left: 25px;
+        background-color: #3b91d4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form__button:hover {
+        color: #fff;
+        background-color: #04528f;
+    }
+
+    .form-container h2,
+    .form-container p {
+        text-align: center;
+    }
+</style>
+<body onload="document.myForm.txtIDNV.focus()">
+    <div class="form-container">
+        <h2>Thêm nhân viên</h2>
+        <form action="" method="post" name="myForm">
+            <div class="form__row">
+                <label class="form__label" for="txtIDNV"><b>Mã nhân viên:</b></label>
+                <input class="form__input" size='20' name="txtIDNV" type="text" placeholder="Nhập ID nhân viên" required>
+            </div>
+            <div class="form__row">
+                <label class="form__label" for="txtNV"><b>Tên nhân viên:</b></label>
+                <input class="form__input" name="txtNV" type="text" placeholder="Nhập tên nhân viên" required>
+            </div>
+            <div class="form__row">
+                <label class="form__label" for="txtIDPB"><b>ID Phòng ban:</b></label>
+                <input class="form__input" name="txtIDPB" type="text" placeholder="Nhập ID phòng ban" required>
+            </div>
+            <div class="form__row">
+                <label class="form__label" for="txtDiachi"><b>Địa chỉ:</b></label>
+                <input class="form__input" name="txtDiachi" type="text" placeholder="Nhập địa chỉ" required>
+            </div>
+            <div class="form__row">
+                <input class="form__button" type="submit" value="Thêm" name="insert">
+                <input class="form__button" type="reset" for="reset" value="Nhập lại">
+            </div>
+        </form>
+        <p><a href="../Controller/C_Staff.php?">Quay lại</a></p>
+    </div>
+</body>
+</html>

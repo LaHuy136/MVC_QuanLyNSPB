@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chèn phòng ban</title>
+</head>
+<style>
+    .form-container {
+        max-width: 660px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 30px auto 0 auto;
+    }
+
+    .form__row {
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form__label {
+        min-width: 130px;
+        margin-top: 7px;
+    }
+
+    .form__input {
+        flex: 1;
+        padding: 5px;
+    }
+
+    .form__button {
+        display: flex;
+        padding: 12px;
+        margin-left: 25px;
+        background-color: #3b91d4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form__button:hover {
+        color: #fff;
+        background-color: #04528f;
+    }
+
+    .form-container h2,
+    .form-container p {
+        text-align: center;
+    }
+</style>
+<body onload="document.myForm.txtIDNV.focus()">
+<div class="form-container" >
+    <form action='' method='post' name="myForm">
+        <h2>Thêm phòng ban</h2>
+        <div class="form__row">
+            <label class="form__label" for="txtIDPB"><b>Mã Phòng ban:</b></label>
+            <input class="form__input" size='20' name="txtIDPB" type="text">
+        </div>
+        <div class="form__row">
+            <label class="form__label" for="txtTenpb"><b>Tên phòng ban:</b></label>
+            <input class="form__input" name="txtTenpb" type="text" >
+        </div>
+        <div class="form__row">
+            <label class="form__label" for="txtMota"><b>Mô tả:</b> </label>
+            <input class="form__input" name="txtMota" type="text" >
+        </div>
+        <div class="form__row">
+            <input class="form__button" type="submit" value="Thêm" name="insert">
+            <input class="form__button" type="reset" for="reset" value="Nhập lại">
+        </div>
+    </form>
+    <p><a href="../Controller/C_Department.php">Quay lại</a></p>
+</div>
+</body>
+</html>

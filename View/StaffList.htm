@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách nhân viên</title>
+</head>
+<style>
+    button {
+        float: right; 
+        padding: 8px;
+        background-color: #3b91d4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    button:hover {
+        color: #fff;
+        background-color: #04528f;
+    }
+</style>
+<body>
+    <?php
+        echo '<h2 style="text-align: center">Danh sách nhân viên:</h2>';
+        if (!empty($staffList)) {
+            echo '<table border = "1" width ="100%" align="center">';
+            echo '<tr><th>IDNV</th><th>Tên nhân viên</th><th>IDPB</th><th>Địa chỉ</th></tr>';
+            foreach ($staffList as $i => $staff) {
+                echo "<tr>";
+                echo "<td> $staff->IDNV </td>";
+                echo "<td> $staff->Hoten </td>";
+                echo "<td> $staff->IDPB </td>";
+                echo "<td> $staff->Diachi </td>";
+                echo "</tr>";
+            }
+            echo '</table> </br>';
+            echo '<button type="button">
+            <a href="../Controller/C_Staff.php?insertForm">Thêm nhân viên</a>
+            </button>';
+        }
+    ?>
+</body>
+</html>

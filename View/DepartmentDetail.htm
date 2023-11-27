@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách chi tiết phòng ban</title>
+</head>
+<style>
+    button {
+        float: right; 
+        padding: 8px;
+        background-color: #3b91d4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    button:hover {
+        color: #fff;
+        background-color: #04528f;
+    }
+</style>
+<body>
+    <?php
+        if (isset($departmentDetail) && !empty($departmentDetail)) {
+            echo '<h2 style="text-align: center">Danh sách chi tiết phòng ban:</h2>';
+            echo '<table border="1" width="100%" align="center">';
+            echo '<tr><th>IDPB</th><th>Tên phòng ban</th><th>Mô tả</th></tr>';
+            foreach ($departmentDetail as $department) {
+                echo '<tr><td>' . $department['IDNV'] . '</td>';
+                echo '<td>' . $department['Hoten'] . '</td>';
+                echo '<td>' . $department['Diachi'] . '</td>';
+                echo '</tr>';
+            }
+            echo '</table>';
+        }
+    ?>
+</body>
+</html>

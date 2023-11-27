@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm nhân viên</title>
+</head>
+<style>
+    .form-container {
+        max-width: 660px;
+        max-height: 500px;
+        padding: 20px;
+        margin: 30px auto 0 auto;
+    }
+
+    .form__row {
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .form__label {
+        font-size: 1.1rem;
+        min-width: 140px;
+    }
+
+    .form__input {
+        margin-left: 15px;
+        padding: 2px;
+    }
+
+    .form__button {
+        display: flex;
+        padding: 8px;
+        margin-left: 25px;
+        background-color: #3b91d4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .form__button:hover {
+        color: #fff;
+        background-color: #04528f;
+    }
+
+    .form-container h2,
+    .form-container p {
+        text-align: center;
+    }
+</style>
+<body onload="document.myForm.Infor.focus()">
+    <div class="form-container">
+        <form action="" method="post" name="myForm">
+            <h2>Tìm kiếm thông tin nhân viên theo</h2>
+            <div class="form__row">
+                <input type="checkbox" value="IDNV" name="IDNV">
+                <label class="form__label" for="IDNV">IDNV</label></br>
+            </div>
+            <div class="form__row">
+                <input type="checkbox" value="Hoten" name="Hoten">
+                <label class="form__label" for="Hoten">Họ tên</label></br>
+            </div>
+            <div class="form__row">
+                <input type="checkbox" value="Diachi" name="Diachi">
+                <label class="form__label" for="Hoten">Địa chỉ</label></br>
+            </div>
+            <div class="form__row">
+                <label class="form__label" for="Infor"><b>Nhập thông tin tìm kiếm</b></label>
+                <input class="form__input" name="Infor" type="text" required>
+            </div>
+            <div class="form__row">
+                <input class="form__button" type="submit" value="Tìm kiếm" name="find">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

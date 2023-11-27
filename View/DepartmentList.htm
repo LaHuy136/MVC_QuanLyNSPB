@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách phòng ban</title>
+</head>
+<style>
+    button {
+        float: right; 
+        padding: 8px;
+        background-color: #3b91d4;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    button:hover {
+        color: #fff;
+        background-color: #04528f;
+    }
+</style>
+<body>
+    <?php
+        echo '<h2 style="text-align: center">Danh sách phòng ban:</h2>';
+        if (!empty($departmentList)) {
+            echo '<table border = "1" width ="100%" align="center">';
+            echo '<tr><th>IDPB</th><th>Tên phòng ban</th><th>Mô tả</th><th>Xem chi tiết</th></tr>';
+            foreach ($departmentList as $i => $department) {
+                echo "<tr><td> $department->IDPB </td>";
+                echo "<td> $department->Tenpb </td>";
+                echo "<td> $department->Mota </td>";
+                echo "<td><a href='../Controller/C_Department.php?detailDepartment=" .$department->IDPB. "'>Chi tiết phòng ban</a></td>";
+            }
+            echo '</table> </br>';
+            echo '<button type="button">
+            <a href="../Controller/C_Department.php?insertForm">Thêm phòng ban</a>
+            </button>';
+        }
+    ?>
+</body>
+</html>
